@@ -2,8 +2,25 @@ import Vue from 'vue'
 import App from './App.vue'
 
 
-import ('bootstrap/dist/css/bootstrap.css')
-import ('animate.css/animate.css')
+import ('../src/assets/css/bootstrap.css')
+import ('../src/assets/css/animate.min.css')
+import('../src/assets/css/styles.css')
+import('../src/assets/img/second_section/ball.png')
+import ('../src/assets/img/second_section/castro.png')
+import ('../src/assets/img/second_section/watch.png')
+import ('../src/assets/img/second_section/grey_phone.png')
+import ('../src/assets/img/second_section/last_phone.png')
+import ('../src/assets/img/second_section/yellow_phone.png')
+import ('../src/assets/img/fourth_section/men.png')
+import ('../src/assets/fonts/Inter-Black.ttf')
+import ('../src/assets/fonts/Inter-Bold.ttf')
+import ('../src/assets/fonts/Inter-ExtraBold.ttf')
+import ('../src/assets/fonts/Inter-ExtraLight.ttf')
+import ('../src/assets/fonts/Inter-Light.ttf')
+import ('../src/assets/fonts/Inter-Medium.ttf')
+import ('../src/assets/fonts/Inter-Regular.ttf')
+import ('../src/assets/fonts/Inter-SemiBold.ttf')
+import ('../src/assets/fonts/Inter-Thin.ttf')
 
 Vue.config.productionTip = false
 
