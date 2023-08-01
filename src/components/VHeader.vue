@@ -6,18 +6,18 @@
           <div class="col-auto mr-auto pb-5">
           </div>
           <div class="col-auto animate__animated animate__backInRight">
-            <button class="mt-5" id="scrollButton">Work</button>
-            <button class="ml-3 mt-5" id="scrollSecondButton">About</button>
-            <button class="ml-3 mt-5" id="scrollThirdButton">Contact</button>
+            <button class="mt-5" id="scrollButton" @click="scrollToSecondSection">Work</button>
+            <button class="ml-3 mt-5" id="scrollSecondButton" @click="scrollToThirdSection">About</button>
+            <button class="ml-3 mt-5" id="scrollThirdButton" @click="scrollToFifthSection">Contact</button>
           </div>
         </div>
       </div>
     </header>
     <v-first-section/>
-    <v-second-section/>
-    <v-third-section/>
+    <v-second-section ref="secondSection"/>
+    <v-third-section ref="thirdSection"/>
     <v-fourth-section/>
-    <v-fifth-section/>
+    <v-fifth-section ref="fifthSection"/>
   </div>
 </template>
 
@@ -38,6 +38,24 @@ export default {
     VFifthSection,
   },
   methods: {
+    scrollToSecondSection() {
+      const secondSection = this.$refs.secondSection.$el;
+      if (secondSection) {
+        secondSection.scrollIntoView({behavior: "smooth"});
+      }
+    },
+    scrollToThirdSection(){
+      const thirdSection = this.$refs.thirdSection.$el;
+      if (thirdSection){
+        thirdSection.scrollIntoView({behavior:"smooth"})
+      }
+    },
+    scrollToFifthSection(){
+      const fifthSection = this.$refs.fifthSection.$el;
+      if (fifthSection) {
+        fifthSection.scrollIntoView({behavior:"smooth"})
+      }
+    }
   }
 }
 </script>
