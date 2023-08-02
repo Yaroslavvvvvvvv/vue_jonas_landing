@@ -5,16 +5,14 @@
         <div class="text-center pt-5" id="targetDiv">
           <h3 class="pt-5">Want to create<br>something awesome?<br>Drop me an email.</h3>
           <div class="pb-5 pt-2">
-            <b-button v-b-modal.modal-prevent-closing>Open Modal</b-button>
-
-            <div class="mt-3">
-              Submitted Names:
+            <b-button v-b-modal.modal-prevent-closing size="lg" variant="outline-dark">→ Order</b-button>
+            <div class="mt-3 text-dark text-uppercase font-weight-bold">
+              Last Orders:
               <div v-if="submittedNames.length === 0">--</div>
-              <ul v-else class="mb-0 pl-3">
-                <li v-for="name in submittedNames" :key="name">{{ name }}</li>
+              <ul v-else class="d-flex justify-content-around row">
+                <li class="col-1" v-for="name in submittedNames" :key="name">{{ name }}</li>
               </ul>
             </div>
-
             <b-modal
                 id="modal-prevent-closing"
                 ref="modal"
