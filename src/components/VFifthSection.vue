@@ -1,52 +1,90 @@
 <template>
-<div>
-  <section class="fifth_section">
-    <div class="container last_section">
-      <div class="text-center pt-5" id="targetDiv">
-        <h3 class="pt-5">Want to create<br>something awesome?<br>Drop me an email.</h3>
-        <div class="pb-5 pt-2">
-          <button type="button" class="btn btn-outline-dark btn-lg"
-                  data-toggle="modal" data-target="#exampleModal"
-                  data-whatever="Hi@email.com">→ Order
-          </button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-               aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content modal_background animate__animated animate__backInUp">
-                <div class="modal-body">
-                  <form id="myForm">
-                    <div class="form-group">
-                      <label for="recipient-name" class="col-form-label font-weight-bold">
-                        Your Email:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label font-weight-bold">Message:
-                      </label>
-                      <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-dark form_button" data-dismiss="modal">Close
-                  </button>
-                  <button type="button" id="submit"
-                          class="btn btn-dark form_button">Send message
-                  </button>
-                </div>
-              </div>
+  <div>
+    <section class="fifth_section">
+      <div class="container last_section">
+        <div class="text-center pt-5" id="targetDiv">
+          <h3 class="pt-5">Want to create<br>something awesome?<br>Drop me an email.</h3>
+          <div class="pb-5 pt-2">
+            <b-button v-b-modal.modal-prevent-closing>Open Modal</b-button>
+
+            <div class="mt-3">
+              Submitted Names:
+              <div v-if="submittedNames.length === 0">--</div>
+              <ul v-else class="mb-0 pl-3">
+                <li v-for="name in submittedNames" :key="name">{{ name }}</li>
+              </ul>
             </div>
+
+            <b-modal
+                id="modal-prevent-closing"
+                ref="modal"
+                title="Submit Your Name"
+                @show="resetModal"
+                @hidden="resetModal"
+                @ok="handleOk"
+            >
+              <form ref="form" @submit.stop.prevent="handleSubmit">
+                <b-form-group
+                    label="Name"
+                    label-for="name-input"
+                    invalid-feedback="Name is required"
+                    :state="nameState"
+                >
+                  <b-form-input
+                      id="name-input"
+                      v-model="name"
+                      :state="nameState"
+                      required
+                  ></b-form-input>
+                </b-form-group>
+              </form>
+            </b-modal>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "VFifthSection"
+  name: "VFifthSection",
+  data() {
+    return {
+      name: '',
+      nameState: false,
+      submittedNames: []
+    }
+  },
+  methods: {
+    checkFormValidity() {
+      const valid = this.$refs.form.checkValidity()
+      this.nameState = valid
+      return valid
+    },
+    resetModal() {
+      this.name = ''
+      this.nameState = null
+    },
+    handleOk(bvModalEvent) {
+      // Prevent modal from closing
+      bvModalEvent.preventDefault()
+      // Trigger submit handler
+      this.handleSubmit()
+    },
+    handleSubmit() {
+      // Exit when the form isn't valid
+      if (!this.checkFormValidity()) {
+        return
+      }
+      // Push the name to submitted names
+      this.submittedNames.push(this.name)
+      // Hide the modal manually
+      this.$nextTick(() => {
+        this.$bvModal.hide('modal-prevent-closing')
+      })
+    }
+  }
 }
 </script>
 

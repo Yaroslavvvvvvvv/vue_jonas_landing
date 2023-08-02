@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+
 
 
 import ('../src/assets/css/bootstrap.css')
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import ('../src/assets/css/animate.min.css')
 import('../src/assets/css/styles.css')
 import('../src/assets/img/second_section/ball.png')
@@ -21,6 +26,7 @@ import ('../src/assets/fonts/Inter-Medium.ttf')
 import ('../src/assets/fonts/Inter-Regular.ttf')
 import ('../src/assets/fonts/Inter-SemiBold.ttf')
 import ('../src/assets/fonts/Inter-Thin.ttf')
+
 
 Vue.config.productionTip = false
 

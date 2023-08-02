@@ -8,11 +8,9 @@
       <div class="row justify-content-between">
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="pt-4">
-            <img id="first_image" class="mw-100" src="../assets/img/second_section/watch.png" alt="watch"
-                 onclick="openModal()">
+            <img id="first_image" class="mw-100" src="../assets/img/second_section/watch.png" alt="watch">
             <div class="animate__animated animate__backInLeft" id="modal_first">
-              <img src="../assets/img/second_section/watch.png" alt="enlarged picture" id="image_first"
-                   onclick="closeModal()">
+              <img src="../assets/img/second_section/watch.png" alt="enlarged picture" id="image_first">
             </div>
             <div id="first_bottom" class="bottom_block">
               <div class="pt-3 pl-4 pb-3">
@@ -22,11 +20,9 @@
             </div>
           </div>
           <div class="pt-4">
-            <img id="second_image" class="mw-100" src="../assets/img/second_section/castro.png" alt="page"
-                 onclick="secondOpenModal()">
+            <img id="second_image" class="mw-100" src="../assets/img/second_section/castro.png" alt="page">
             <div class="animate__animated animate__backInLeft" id="modal_second">
-              <img src="../assets/img/second_section/castro.png" alt="enlarged picture" id="image_second"
-                   onclick="secondCloseModal()">
+              <img src="../assets/img/second_section/castro.png" alt="enlarged picture" id="image_second">
             </div>
             <div id="second_bottom" class="bottom_block">
               <div class="pt-3 pl-4 pb-3">
@@ -36,11 +32,9 @@
             </div>
           </div>
           <div class="pt-4">
-            <img id="third_image" class="mw-100" src="../assets/img/second_section/grey_phone.png" alt="phone"
-                 onclick="thirdOpenModal()">
+            <img id="third_image" class="mw-100" src="../assets/img/second_section/grey_phone.png" alt="phone">
             <div class="animate__animated animate__backInLeft" id="modal_third">
-              <img src="../assets/img/second_section/grey_phone.png" alt="enlarged picture" id="image_third"
-                   onclick="thirdCloseModal()">
+              <img src="../assets/img/second_section/grey_phone.png" alt="enlarged picture" id="image_third">
             </div>
             <div id="third_bottom" class="bottom_block">
               <div class="pt-3 pl-4 pb-3">
@@ -52,11 +46,9 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="pt-4">
-            <img id="fourth_image" class="mw-100" src="../assets/img/second_section/ball.png" alt="ball"
-                 onclick="fourthOpenModal()">
+            <img id="fourth_image" class="mw-100" src="../assets/img/second_section/ball.png" alt="ball">
             <div class="animate__animated animate__backInLeft" id="modal_fourth">
-              <img src="../assets/img/second_section/ball.png" alt="enlarged picture" id="image_fourth"
-                   onclick="fourthCloseModal()">
+              <img src="../assets/img/second_section/ball.png" alt="enlarged picture" id="image_fourth">
             </div>
             <div id="fourth_bottom" class="bottom_block">
               <div class="pt-3 pl-4 pb-3">
@@ -66,11 +58,9 @@
             </div>
           </div>
           <div class="pt-4">
-            <img id="fifth_image" class="mw-100" src="../assets/img/second_section/yellow_phone.png" alt="phone"
-                 onclick="fifthOpenModal()">
+            <img id="fifth_image" class="mw-100" src="../assets/img/second_section/yellow_phone.png" alt="phone">
             <div class="animate__animated animate__backInLeft" id="modal_fifth">
-              <img src="../assets/img/second_section/yellow_phone.png" alt="enlarged picture" id="image_fifth"
-                   onclick="fifthCloseModal()">
+              <img src="../assets/img/second_section/yellow_phone.png" alt="enlarged picture" id="image_fifth">
             </div>
             <div id="fifth_bottom" class="bottom_block">
               <div class="pt-3 pl-4 pb-3">
@@ -80,11 +70,9 @@
             </div>
           </div>
           <div class="pt-4">
-            <img id="sixth_image" class="mw-100" src="../assets/img/second_section/last_phone.png" alt="phone"
-                 onclick="sixthOpenModal()">
+            <img id="sixth_image" class="mw-100" src="../assets/img/second_section/last_phone.png" alt="phone">
             <div class="animate__animated animate__backInLeft" id="modal_sixth">
-              <img src="../assets/img/second_section/last_phone.png" alt="enlarged picture" id="image_sixth"
-                   onclick="sixthCloseModal()">
+              <img src="../assets/img/second_section/last_phone.png" alt="enlarged picture" id="image_sixth">
             </div>
             <div id="sixth_bottom" class="bottom_block">
               <div class="pt-3 pl-4 pb-3">
